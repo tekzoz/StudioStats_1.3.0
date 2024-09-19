@@ -8,19 +8,38 @@ const DashboardContainer = styled.div`
   min-height: 100vh;
   padding: 24px;
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
 `;
 
 const DashboardContent = styled.div`
   max-width: 900px;
   margin: 0 auto;
+  flex-grow: 1;
 `;
 
 const DashboardTitle = styled.h1`
   font-size: 32px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   color: #1F2937;
+`;
+
+const DashboardSubtitle = styled.div`
+  text-align: center;
+  margin-bottom: 32px;
+  color: #4B5563;
+`;
+
+const MainSubtitle = styled.p`
+  font-size: 18px;
+  margin-bottom: 8px;
+`;
+
+const SubSubtitle = styled.p`
+  font-size: 14px;
+  margin: 0;
 `;
 
 const DashboardGrid = styled.div`
@@ -82,6 +101,13 @@ const CardLabel = styled.span`
   text-align: center;
 `;
 
+const Footer = styled.footer`
+  text-align: center;
+  padding: 16px 0;
+  font-size: 12px;
+  color: #6B7280;
+`;
+
 const MainView = ({ setView }) => {
   const [visibleCards, setVisibleCards] = useState([]);
 
@@ -91,7 +117,7 @@ const MainView = ({ setView }) => {
     { icon: <CompareMonthsIcon />, label: "Confronta mesi", color: "#D1FAE5", onClick: () => setView('compareMonths') },
     { icon: <CompareYearsIcon />, label: "Confronta Anni", color: "#EDE9FE", onClick: () => setView('compareYears') },
     { icon: <Mic size="100%" color="red" />, label: "Statistiche Fonici", color: "#FEE2E2", onClick: () => setView('statisticheFonici') },
-    { icon: <PerformanceTrendIcon />, label: "Performance Trend", color: "#D1FAE5", onClick: () => console.log("Performance Trend") },
+    { icon: <PerformanceTrendIcon />, label: "Performance Trend", color: "#D1FAE5", onClick: () => setView('performanceTrend') },
     { icon: <InformationIcon />, label: "Informazioni", color: "#E0E7FF", onClick: () => setView('information') },
     { icon: <PlusCircle size="100%" />, label: "Inserisci Dati", color: "#FDE68A", onClick: () => setView('dataInput') },
   ];
@@ -119,6 +145,15 @@ const MainView = ({ setView }) => {
     <DashboardContainer>
       <DashboardContent>
         <DashboardTitle>Statistiche Studio Pumaisdue</DashboardTitle>
+        <DashboardSubtitle>
+          <MainSubtitle>
+            Esplora le statistiche e le performance dello studio.<br />
+            Analizza i trend e confronta i dati.
+          </MainSubtitle>
+          <SubSubtitle>
+            Per una migliore esperienza, ruotare il telefono in orizzontale.
+          </SubSubtitle>
+        </DashboardSubtitle>
         <DashboardGrid>
           {cards.map((card, index) => (
             <DashboardCard
@@ -135,6 +170,9 @@ const MainView = ({ setView }) => {
           ))}
         </DashboardGrid>
       </DashboardContent>
+      <Footer>
+        &copy; 2024 Marco Augusto Comba | Versione 1.3.0
+      </Footer>
     </DashboardContainer>
   );
 };

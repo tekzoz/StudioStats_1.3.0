@@ -70,7 +70,7 @@ const InformationView = ({ setView }) => {
             color: '#4B5563',
             marginBottom: '16px',
           }}>
-            Versione: 1.0.0
+            Versione: 1.3.0
           </p>
           <p style={{
             fontSize: '16px',
@@ -131,7 +131,84 @@ const InformationView = ({ setView }) => {
             <li style={{ marginBottom: '8px' }}>Ultimo Anno: Mostra un riepilogo dell'ultimo anno di attività.</li>
             <li style={{ marginBottom: '8px' }}>Confronta Mesi: Permette di confrontare le statistiche di due mesi diversi.</li>
             <li style={{ marginBottom: '8px' }}>Confronta Anni: Offre un confronto tra due anni selezionati.</li>
-            <li>Inserisci Dati: Consente l'inserimento di nuovi dati nel sistema.</li>
+            <li style={{ marginBottom: '8px' }}>Statistiche Fonici: Fornisce una panoramica dettagliata delle prestazioni dei fonici.</li>
+            <li style={{ marginBottom: '8px' }}>Performance Trend: Analizza e visualizza i trend di performance nel tempo.</li>
+            <li style={{ marginBottom: '8px' }}>Inserisci Dati: Consente l'inserimento di nuovi dati nel sistema.</li>
+          </ul>
+        </div>
+
+        <div style={{
+          backgroundColor: 'white',
+          padding: '24px',
+          borderRadius: '8px',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+          marginTop: '24px',
+        }}>
+          <h2 style={{
+            fontSize: '24px',
+            fontWeight: 'bold',
+            marginBottom: '16px',
+            color: '#374151',
+          }}>
+            Dettagli sulle Funzionalità
+          </h2>
+          
+          <h3 style={{
+            fontSize: '20px',
+            fontWeight: 'bold',
+            marginTop: '16px',
+            marginBottom: '12px',
+            color: '#374151',
+          }}>
+            Statistiche Fonici
+          </h3>
+          <p style={{
+            fontSize: '16px',
+            lineHeight: '1.5',
+            color: '#4B5563',
+            marginBottom: '16px',
+          }}>
+            Questa sezione offre una visione dettagliata delle prestazioni dei fonici:
+          </p>
+          <ul style={{
+            fontSize: '16px',
+            lineHeight: '1.5',
+            color: '#4B5563',
+            paddingLeft: '20px',
+            marginBottom: '16px',
+          }}>
+            <li>Classifiche di utilizzo per l'ultimo mese, quadrimestre e anno</li>
+            <li>Grafici comparativi per visualizzare le prestazioni</li>
+            <li>Suggerimenti per il bilanciamento dei turni tra i fonici</li>
+          </ul>
+
+          <h3 style={{
+            fontSize: '20px',
+            fontWeight: 'bold',
+            marginTop: '16px',
+            marginBottom: '12px',
+            color: '#374151',
+          }}>
+            Performance Trend
+          </h3>
+          <p style={{
+            fontSize: '16px',
+            lineHeight: '1.5',
+            color: '#4B5563',
+            marginBottom: '16px',
+          }}>
+            Questa funzionalità analizza e visualizza i trend di performance nel tempo:
+          </p>
+          <ul style={{
+            fontSize: '16px',
+            lineHeight: '1.5',
+            color: '#4B5563',
+            paddingLeft: '20px',
+          }}>
+            <li>Grafico del trend annuale con confronto tra gli anni</li>
+            <li>Analisi dettagliata dell'anno in corso</li>
+            <li>Previsioni per i mesi futuri basate sui dati storici</li>
+            <li>Possibilità di condividere i risultati dell'analisi</li>
           </ul>
         </div>
       </div>

@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import MainView from './MainView';
-import LandingPage from './LandingPage';
 import LastMonthView from './LastMonthView';
 import LastYearView from './LastYearView';
 import CompareMonthsView from './CompareMonthsView';
@@ -11,12 +10,10 @@ import StatisticheFonici from './StatisticheFonici';
 import PerformanceTrendView from './PerformanceTrendView';
 
 const App = () => {
-  const [currentView, setCurrentView] = useState('landing');
+  const [currentView, setCurrentView] = React.useState('main');
 
   const renderView = () => {
     switch (currentView) {
-      case 'landing':
-        return <LandingPage onEnter={() => setCurrentView('main')} />;
       case 'main':
         return <MainView setView={setCurrentView} />;
       case 'lastMonth':
@@ -36,7 +33,7 @@ const App = () => {
       case 'performanceTrend':
         return <PerformanceTrendView setView={setCurrentView} />;
       default:
-        return <LandingPage onEnter={() => setCurrentView('main')} />;
+        return <MainView setView={setCurrentView} />;
     }
   };
 
